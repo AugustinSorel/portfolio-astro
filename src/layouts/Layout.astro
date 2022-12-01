@@ -1,4 +1,6 @@
 ---
+import Header from "../components/Header.astro";
+
 export interface Props {
   title: string;
   description: string;
@@ -18,14 +20,31 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
 <style is:global lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-  $background-color: hsl(40, 10%, 90%);
-  $color: hsl(220, 5%, 15%);
+  :root {
+    --background-color: hsl(40, 10%, 90%);
+    --color: hsl(220, 5%, 15%);
+
+    --base-font-size: 1.5rem;
+    --font-size-extra-small: calc(var(--base-font-size) * 0.5);
+    --font-size-small: calc(var(--base-font-size) * 0.75);
+    --font-size-medium: calc(var(--base-font-size) * 1);
+    --font-size-large: calc(var(--base-font-size) * 1.25);
+    --font-size-extra-large: calc(var(--base-font-size) * 1.5);
+
+    --base-gap: 1rem;
+    --gap-extra-small: calc(var(--base-gap) * 0.5);
+    --gap-small: calc(var(--base-gap) * 1);
+    --gap-medium: calc(var(--base-gap) * 1.5);
+    --gap-large: calc(var(--base-gap) * 2);
+    --gap-extra-large: calc(var(--base-gap) * 2.5);
+  }
 
   *,
   *::before,
@@ -37,7 +56,13 @@ const { title, description } = Astro.props;
 
   body {
     font-family: "Roboto", sans-serif;
-    background-color: $background-color;
-    color: $color;
+    background-color: var(--background-color);
+    color: var(--color);
+  }
+
+  @media screen and (max-width: 1000px) {
+    :root {
+      --base-font-size: 1.25rem;
+    }
   }
 </style>
