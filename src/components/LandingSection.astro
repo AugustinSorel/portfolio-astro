@@ -1,0 +1,67 @@
+<section>
+  <p>
+    I am a software engineer student from the University of Leicester.
+    <strong>Passionate</strong> about web development and design.
+  </p>
+  <canvas></canvas>
+</section>
+
+<!-- TODO: clean code here -->
+<!-- TODO: analytics ? https://microanalytics.io/ -->
+
+<style lang="scss">
+  section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: calc(100vh - var(--header-height));
+    border-bottom: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    overflow: hidden;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: none;
+      height: auto;
+    }
+  }
+
+  p {
+    margin: auto var(--gap-large);
+    font-size: var(--font-size-large);
+    max-width: 50rem;
+    animation: enter var(--animation-duration) var(--animation-timing-function);
+
+    @media screen and (max-width: 600px) {
+      font-size: var(--font-size-medium);
+      margin: 20% var(--gap-large);
+    }
+  }
+
+  canvas {
+    border-left: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+
+    @media screen and (max-width: 600px) {
+      border: none;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+  }
+
+  @keyframes enter {
+    from {
+      translate: 0 20px;
+      opacity: 0;
+    }
+
+    to {
+      translate: 0;
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  import { fractal } from "../utils/fractal";
+
+  fractal();
+</script>

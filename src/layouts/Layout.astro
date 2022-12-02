@@ -44,6 +44,11 @@ const { title, description } = Astro.props;
     --gap-medium: calc(var(--base-gap) * 1.5);
     --gap-large: calc(var(--base-gap) * 2);
     --gap-extra-large: calc(var(--base-gap) * 2.5);
+
+    --animation-duration: 1.5s;
+    --animation-timing-function: ease;
+
+    --header-height: 64px;
   }
 
   *,
@@ -58,11 +63,41 @@ const { title, description } = Astro.props;
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     color: var(--color);
+
+    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
-  @media screen and (max-width: 1000px) {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
     :root {
       --base-font-size: 1.25rem;
     }
+  }
+
+  ::selection {
+    background-color: var(--color);
+    color: var(--background-color);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: currentColor;
+    border-radius: 5rem;
   }
 </style>

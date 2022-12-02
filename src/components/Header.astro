@@ -1,6 +1,3 @@
----
----
-
 <header>
   <h1>augustin sorel</h1>
   <p>web developer</p>
@@ -9,9 +6,10 @@
 <style lang="scss">
   header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-bottom: 1px currentColor solid;
+    align-items: center;
+    padding: 0 var(--gap-medium);
+    height: var(--header-height);
   }
 
   h1,
@@ -19,6 +17,5 @@
     font-weight: 400;
     font-size: var(--font-size-small);
     text-transform: capitalize;
-    padding: var(--gap-small) var(--gap-medium);
   }
 </style>
