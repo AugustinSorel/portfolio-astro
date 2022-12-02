@@ -3,10 +3,9 @@
     I am a software engineer student from the University of Leicester.
     <strong>Passionate</strong> about web development and design.
   </p>
-  <img src="https://philiphugle.de/images/streamlinesblack.svg" alt="" />
+  <canvas></canvas>
 </section>
 
-<!-- TODO: use canvas instead of image -->
 <!-- TODO: clean code here -->
 <!-- TODO: analytics ? https://microanalytics.io/ -->
 
@@ -17,6 +16,7 @@
     height: calc(100vh - var(--header-height));
     border-bottom: 1px solid currentColor;
     border-top: 1px solid currentColor;
+    overflow: hidden;
 
     @media screen and (max-width: 600px) {
       grid-template-columns: none;
@@ -36,10 +36,7 @@
     }
   }
 
-  img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  canvas {
     border-left: 1px solid currentColor;
     border-right: 1px solid currentColor;
 
@@ -47,7 +44,6 @@
       border: none;
       border-top: 1px solid currentColor;
       border-bottom: 1px solid currentColor;
-      height: 300px;
     }
   }
 
@@ -63,3 +59,9 @@
     }
   }
 </style>
+
+<script>
+  import { fractal } from "../utils/fractal";
+
+  fractal();
+</script>
