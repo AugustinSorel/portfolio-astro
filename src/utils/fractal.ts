@@ -3,7 +3,7 @@ export const fractal = () => {
   const ctx = canvas.getContext("2d")!;
 
   let len = 175;
-  let angle = Math.PI / 8;
+  let angle = Math.PI / (Math.floor(Math.random() * 8) + 2);
   type Props = { ctx: CanvasRenderingContext2D; len: number };
 
   window.addEventListener("resize", () => {

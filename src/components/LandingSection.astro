@@ -1,15 +1,15 @@
-<section>
+<div>
   <p>
     I am a software engineer student from the University of Leicester.
     <strong>Passionate</strong> about web development and design.
   </p>
   <canvas></canvas>
-</section>
+</div>
 
 <!-- TODO: analytics ? https://microanalytics.io/ -->
 
 <style lang="scss">
-  section {
+  div {
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: calc(100vh - var(--header-height));
@@ -37,7 +37,6 @@
 
   canvas {
     border-left: 1px solid currentColor;
-    border-right: 1px solid currentColor;
 
     @media screen and (max-width: 600px) {
       border: none;

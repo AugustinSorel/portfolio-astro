@@ -1,0 +1,115 @@
+<section>
+  <h2>selected projects</h2>
+  <ul>
+    <li>
+      <a href="/projects/portfolio">
+        <h3>portfolio</h3>
+      </a>
+      <p>astro — ts — sass</p>
+    </li>
+    <li>
+      <a href="/projects/gym-tracker">
+        <h3>gym tracker</h3>
+      </a>
+      <p>nextjs — trpc — postgresql — ts — aws</p>
+    </li>
+    <li>
+      <a href="/projects/instagram-clone">
+        <h3>instagram clone</h3>
+      </a>
+      <p>reactjs — nodejs — mongodb — ts</p>
+    </li>
+    <li>
+      <a href="/projects/multiplayer-tic-tac-toe">
+        <h3>multiplayer tic-tac-toe</h3>
+      </a>
+      <p>reactjs — nodejs — socketio — ts</p>
+    </li>
+    <li>
+      <a href="/projects/dfs-visualizer">
+        <h3>DFS visualizer</h3>
+      </a>
+      <p>c# — wpf — xaml</p>
+    </li>
+    <li>
+      <a href="/sorting-algorithm-visualizer">
+        <h3>sorting algorithm visualizer</h3>
+      </a>
+      <p>c# — wpf — xaml</p>
+    </li>
+  </ul>
+</section>
+
+<style lang="scss">
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid currentColor;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: none;
+    }
+  }
+
+  h2 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: var(--font-size-large);
+    padding: var(--gap-large);
+    position: sticky;
+    top: 0;
+    height: min-content;
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      border-bottom: 1px solid currentColor;
+      padding: 10% var(--gap-large);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding: var(--gap-large);
+    border-color: currentColor;
+    border-left: 1px solid;
+
+    & + & {
+      border-top: 1px solid;
+    }
+
+    @media screen and (max-width: 600px) {
+      border-left: none;
+    }
+  }
+
+  a {
+    color: currentColor;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+
+    &:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  h3 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: var(--font-size-medium);
+
+    &::after {
+      content: "\1F86D";
+      margin-left: var(--gap-extra-small);
+    }
+  }
+
+  p {
+    font-size: var(--font-size-small);
+    text-transform: uppercase;
+  }
+</style>
