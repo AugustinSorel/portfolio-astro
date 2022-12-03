@@ -1,10 +1,12 @@
 <div class="cursor"></div>
 
 <style lang="scss">
+  $cursor-size: 16px;
+  $cursor-rim-size: 50px;
+
   .cursor {
     position: fixed;
-    left: 10px;
-    width: 16px;
+    width: $cursor-size;
     aspect-ratio: 1/1;
     translate: -50% -50%;
     border: 1px solid currentColor;
@@ -18,7 +20,7 @@
     &::after {
       content: "";
       position: absolute;
-      height: 50px;
+      height: $cursor-rim-size;
       aspect-ratio: 1/1;
       left: 50%;
       top: 50%;
@@ -34,9 +36,8 @@
   }
 
   .cursor.grow {
-    width: 50px;
+    width: $cursor-rim-size;
     transition: width 500ms, height 500ms;
-    cursor: none;
   }
 
   html:hover .cursor {
