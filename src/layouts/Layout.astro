@@ -31,7 +31,7 @@ const { title, description } = Astro.props;
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
   :root {
-    --background-color: hsl(300, 100%, 99%);
+    --background-color: hsl(300, 100%, 96%);
     --color: hsl(220, 5%, 15%);
 
     --base-font-size: 1.5rem;
@@ -62,14 +62,15 @@ const { title, description } = Astro.props;
     box-sizing: border-box;
   }
 
-  html {
-    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
-  }
-
   body {
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     color: var(--color);
+  }
+
+  header,
+  section {
+    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
   @keyframes fadeIn {
@@ -85,6 +86,7 @@ const { title, description } = Astro.props;
   @media screen and (max-width: 600px) {
     :root {
       --base-font-size: 1.25rem;
+      --base-gap: 0.5rem;
     }
   }
 
