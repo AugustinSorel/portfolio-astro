@@ -1,6 +1,7 @@
 export const fractal = () => {
   const canvas = document.querySelector("canvas")!;
   const ctx = canvas.getContext("2d")!;
+
   let len = 175;
   let angle = Math.PI / 8;
   type Props = { ctx: CanvasRenderingContext2D; len: number };
@@ -53,6 +54,9 @@ export const fractal = () => {
   //draws staright line from reference
   const line = ({ ctx, len }: Props) => {
     ctx.beginPath();
+    ctx.strokeStyle = window
+      .getComputedStyle(document.body)
+      .getPropertyValue("color");
     ctx.moveTo(0, 0);
     ctx.lineTo(0, -len);
     ctx.stroke();
