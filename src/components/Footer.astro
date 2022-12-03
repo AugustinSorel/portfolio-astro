@@ -21,10 +21,9 @@
   </div>
 </footer>
 
-<!-- TODO: dark mode -->
-<!-- TODO: languages -->
-<!-- TODO: footer -->
 <!-- TODO: fix icon -->
+<!-- TODO: footer -->
+<!-- TODO: languages -->
 
 <style lang="scss">
   footer {
@@ -37,7 +36,7 @@
     }
   }
 
-  div *:not(:first-child) {
+  div > *:not(:first-child) {
     margin-left: var(--gap-small);
   }
 
@@ -46,13 +45,26 @@
     font-size: var(--font-size-small);
   }
 
-  .dark-mode-container button {
+  #dark-mode,
+  #light-mode {
     background-color: transparent;
     border: none;
     text-transform: capitalize;
     font-size: var(--font-size-small);
     color: currentColor;
     cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #dark-mode {
+      text-decoration: underline;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    #light-mode {
+      text-decoration: underline;
+    }
   }
 </style>
 

@@ -4,8 +4,6 @@ export const darkMode = () => {
   const lightModeButton =
     document.querySelector<HTMLButtonElement>("#light-mode")!;
 
-  var root = document.documentElement;
-
   darkModeButton.addEventListener("click", () => {
     document.body.classList.add("dark-mode");
     document.body.classList.remove("light-mode");
