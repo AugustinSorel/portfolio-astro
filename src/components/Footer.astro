@@ -1,0 +1,63 @@
+<footer>
+  <div class="dark-mode-container">
+    <button id="dark-mode">dark</button>
+    <button id="light-mode">light</button>
+  </div>
+
+  <div>
+    <a href="https://github.com/AugustinSorel" target="_blank">github</a>
+    <a
+      href="https://www.youtube.com/channel/UCM_FdTMwVrJyhk6nvzWaLig"
+      target="_blank"
+    >
+      youtube
+    </a>
+    <a href="/CV-2022-EN.pdf" target="_blank">CV</a>
+  </div>
+
+  <div>
+    <a>EN</a>
+    <a>FR</a>
+  </div>
+</footer>
+
+<!-- TODO: dark mode -->
+<!-- TODO: languages -->
+<!-- TODO: footer -->
+<!-- TODO: fix icon -->
+
+<style lang="scss">
+  footer {
+    padding: var(--gap-large);
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+      padding: 10% var(--gap-large);
+    }
+  }
+
+  div *:not(:first-child) {
+    margin-left: var(--gap-small);
+  }
+
+  a {
+    text-transform: capitalize;
+    font-size: var(--font-size-small);
+  }
+
+  .dark-mode-container button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: var(--font-size-small);
+    color: currentColor;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  import { darkMode } from "../utils/darkMode";
+
+  darkMode();
+</script>
