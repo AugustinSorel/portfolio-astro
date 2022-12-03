@@ -1,4 +1,5 @@
 ---
+import Cursor from "../components/Cursor.astro";
 import Header from "../components/Header.astro";
 
 export interface Props {
@@ -20,15 +21,17 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Cursor />
     <Header />
     <slot />
   </body>
 </html>
+
 <style is:global lang="scss">
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
   :root {
-    --background-color: hsl(40, 10%, 90%);
+    --background-color: hsl(300, 100%, 99%);
     --color: hsl(220, 5%, 15%);
 
     --base-font-size: 1.5rem;
@@ -59,12 +62,14 @@ const { title, description } = Astro.props;
     box-sizing: border-box;
   }
 
+  html {
+    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
+  }
+
   body {
     font-family: "Roboto", sans-serif;
     background-color: var(--background-color);
     color: var(--color);
-
-    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
   @keyframes fadeIn {
@@ -98,6 +103,5 @@ const { title, description } = Astro.props;
 
   ::-webkit-scrollbar-thumb {
     background: currentColor;
-    border-radius: 5rem;
   }
 </style>
