@@ -31,7 +31,7 @@ const { title, description } = Astro.props;
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
   :root {
-    --background-color: hsl(300, 100%, 96%);
+    --background-color: hsl(300, 20%, 80%);
     --color: hsl(220, 5%, 15%);
 
     --base-font-size: 1.5rem;
@@ -101,6 +101,7 @@ const { title, description } = Astro.props;
 
   ::-webkit-scrollbar-track {
     background: transparent;
+    border-left: 1px solid currentColor;
   }
 
   ::-webkit-scrollbar-thumb {
