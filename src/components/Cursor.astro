@@ -1,15 +1,13 @@
 <div class="cursor"></div>
 
 <style lang="scss">
-  $cursor-size: 16px;
   $cursor-rim-size: 50px;
 
   .cursor {
     position: fixed;
-    width: $cursor-size;
+    width: 0;
     aspect-ratio: 1/1;
     translate: -50% -50%;
-    border: 1px solid currentColor;
     border-radius: 50%;
     pointer-events: none;
     transition: opacity 250ms, width 500ms, height 500ms;
