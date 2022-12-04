@@ -4,7 +4,7 @@
     <button id="light-mode">light</button>
   </div>
 
-  <div>
+  <div class="links-container">
     <a href="https://github.com/AugustinSorel" target="_blank">github</a>
     <a
       href="https://www.youtube.com/channel/UCM_FdTMwVrJyhk6nvzWaLig"
@@ -42,6 +42,14 @@
   a {
     text-transform: capitalize;
     font-size: var(--font-size-small);
+  }
+
+  .links-container a:last-child {
+    margin-right: 3.5rem;
+
+    @media screen and (max-width: 600px) {
+      margin: 0;
+    }
   }
 
   #dark-mode,
