@@ -89,11 +89,12 @@
     font-size: var(--font-size-large);
     padding: var(--gap-large);
     position: sticky;
-    top: 0;
+    top: var(--header-height);
     height: min-content;
 
     @media screen and (max-width: 600px) {
       position: relative;
+      top: 0;
       border-bottom: 1px solid currentColor;
       padding: 10% var(--gap-large);
     }
