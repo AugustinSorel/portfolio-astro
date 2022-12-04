@@ -1,0 +1,86 @@
+---
+import SectionList from "./SectionList.astro";
+import SectionListItem from "./SectionListItem.astro";
+---
+
+<SectionList title="work experiences">
+  <SectionListItem
+    title="tarmac technologies"
+    date="June 2022 - Present"
+    href="https://www.tarmactechnologies.com/"
+  >
+    <ul>
+      <li>
+        Performed software maintenance and delivered new features for two major
+        codebases designed to be used by airline companies and airports ground
+        workers.
+      </li>
+      <li>
+        Partnered with back-end developers and created a dynamic dashboard with
+        live data using Typescript and React, resulting in website leads
+        increase by 15%.
+      </li>
+      <li>
+        Wrote modular, reusable and well tested components with React and
+        Typescript that are currently being used by more than 10 000 of active
+        users.
+      </li>
+      <li>
+        Followed a strict TDD method to deliver code with a test coverage of
+        almost 100%.
+      </li>
+      <li>
+        Worked in accordance with Agile, attending daily Scrums and working in
+        weekly sprints.
+      </li>
+    </ul>
+  </SectionListItem>
+
+  <SectionListItem
+    title="tarmac technologies"
+    date="June 2022 - Present"
+    href="https://www.tarmactechnologies.com/"
+  >
+    <ul>
+      <li>
+        Performed software maintenance and delivered new features for two major
+        codebases designed to be used by airline companies and airports ground
+        workers.
+      </li>
+      <li>
+        Partnered with back-end developers and created a dynamic dashboard with
+        live data using Typescript and React, resulting in website leads
+        increase by 15%.
+      </li>
+      <li>
+        Wrote modular, reusable and well tested components with React and
+        Typescript that are currently being used by more than 10 000 of active
+        users.
+      </li>
+      <li>
+        Followed a strict TDD method to deliver code with a test coverage of
+        almost 100%.
+      </li>
+      <li>
+        Worked in accordance with Agile, attending daily Scrums and working in
+        weekly sprints.
+      </li>
+    </ul>
+  </SectionListItem>
+</SectionList>
+
+<style lang="scss">
+  ul {
+    list-style-position: inside;
+  }
+
+  li {
+    &::marker {
+      content: "*";
+    }
+
+    &:not(:first-child) {
+      margin-top: var(--gap-extra-small);
+    }
+  }
+</style>
