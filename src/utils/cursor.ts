@@ -6,8 +6,8 @@ export const cursor = () => {
     cursor.style.top = `${clientY}px`;
   });
 
-  Array.from(document.querySelectorAll("canvas, a")).forEach((pTag) => {
-    pTag.addEventListener("mouseover", () => cursor.classList.add("grow"));
-    pTag.addEventListener("mouseleave", () => cursor.classList.remove("grow"));
+  Array.from(document.querySelectorAll("canvas, a, button")).forEach((tag) => {
+    tag.addEventListener("mouseover", () => cursor.classList.add("grow"));
+    tag.addEventListener("mouseleave", () => cursor.classList.remove("grow"));
   });
 };

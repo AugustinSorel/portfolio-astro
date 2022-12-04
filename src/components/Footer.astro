@@ -1,0 +1,75 @@
+<footer>
+  <div class="links-container">
+    <a href="https://github.com/AugustinSorel" target="_blank">github</a>
+    <a
+      href="https://www.youtube.com/channel/UCM_FdTMwVrJyhk6nvzWaLig"
+      target="_blank"
+    >
+      youtube
+    </a>
+    <a href="/CV-2022-EN.pdf" target="_blank">CV</a>
+  </div>
+
+  <div class="dark-mode-container">
+    <button id="dark-mode">dark</button>
+    <button id="light-mode">light</button>
+  </div>
+</footer>
+
+<style lang="scss">
+  footer {
+    padding: var(--gap-large);
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    @media screen and (max-width: 600px) {
+      padding: 10% var(--gap-large);
+      display: flex;
+    }
+  }
+
+  div > *:not(:first-child) {
+    margin-left: var(--gap-small);
+  }
+
+  a {
+    text-transform: capitalize;
+    font-size: var(--font-size-small);
+  }
+
+  .links-container {
+    grid-column-start: 2;
+  }
+
+  .dark-mode-container {
+    margin-left: auto;
+  }
+
+  #dark-mode,
+  #light-mode {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: var(--font-size-small);
+    color: currentColor;
+    cursor: pointer;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #dark-mode {
+      text-decoration: underline;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    #light-mode {
+      text-decoration: underline;
+    }
+  }
+</style>
+
+<script>
+  import { darkMode } from "../utils/darkMode";
+
+  darkMode();
+</script>

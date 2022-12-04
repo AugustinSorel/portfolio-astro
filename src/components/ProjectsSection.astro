@@ -40,6 +40,8 @@
   </ul>
 </section>
 
+<!-- TODO: project page -->
+
 <style lang="scss">
   section {
     display: grid;
@@ -57,11 +59,12 @@
     font-size: var(--font-size-large);
     padding: var(--gap-large);
     position: sticky;
-    top: 0;
+    top: var(--header-height);
     height: min-content;
 
     @media screen and (max-width: 600px) {
       position: relative;
+      top: 0;
       border-bottom: 1px solid currentColor;
       padding: 10% var(--gap-large);
     }
@@ -86,25 +89,40 @@
   }
 
   a {
-    color: currentColor;
-    text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
     width: fit-content;
-
-    &:focus-visible {
-      text-decoration: underline;
-      outline: none;
-    }
   }
 
   h3 {
     text-transform: capitalize;
     font-weight: 400;
     font-size: var(--font-size-medium);
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--gap-extra-small);
+
+    @media screen and (max-width: 600px) {
+      margin-bottom: var(--gap-small);
+    }
 
     &::after {
-      content: "\1F86D";
+      content: "";
+      height: 16px;
+      width: 16px;
+      background-color: currentColor;
       margin-left: var(--gap-extra-small);
+      clip-path: polygon(
+        56.75% 35%,
+        23.5% 67.86%,
+        31.25% 75%,
+        63.5% 40%,
+        63.5% 75%,
+        73.5% 75%,
+        73.5% 25%,
+        23.5% 25%,
+        23.5% 35%
+      );
     }
   }
 
