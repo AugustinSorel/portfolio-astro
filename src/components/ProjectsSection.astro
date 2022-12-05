@@ -1,57 +1,57 @@
 ---
-import SectionList from "./SectionList.astro";
-import SectionListItem from "./SectionListItem.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import SectionItemLayout from "../layouts/SectionItemLayout.astro";
 ---
 
-<SectionList title="selected projects">
-  <SectionListItem
+<SectionLayout title="selected projects">
+  <SectionItemLayout
     title="portfolio"
-    date="June 2022 - Present"
+    date="December 2022 - Present"
     href="/projects/portfolio"
   >
     <p>astro — ts — sass</p>
-  </SectionListItem>
+  </SectionItemLayout>
 
-  <SectionListItem
+  <SectionItemLayout
     title="gym tracker"
-    date="June 2022 - Present"
+    date="August 2022 - November 2022"
     href="/projects/gym-tracker"
   >
     <p>nextjs — trpc — postgresql — ts — aws</p>
-  </SectionListItem>
+  </SectionItemLayout>
 
-  <SectionListItem
+  <SectionItemLayout
     title="instagram clone"
-    date="June 2022 - Present"
+    date="April 2022 - July"
     href="/projects/instagram-clone"
   >
     <p>reactjs — nodejs — mongodb — ts</p>
-  </SectionListItem>
+  </SectionItemLayout>
 
-  <SectionListItem
+  <SectionItemLayout
     title="multiplayer tic-tac-toe"
-    date="June 2022 - Present"
+    date="February 2022 - April"
     href="/projects/multiplayer-tic-tac-toe"
   >
     <p>reactjs — nodejs — socketio — ts</p>
-  </SectionListItem>
+  </SectionItemLayout>
 
-  <SectionListItem
-    title="DFS visualizer"
-    date="June 2022 - Present"
-    href="/projects/dfs-visualizer"
-  >
-    <p>c# — wpf — xaml</p>
-  </SectionListItem>
-
-  <SectionListItem
+  <SectionItemLayout
     title="sorting algorithm visualizer"
-    date="June 2022 - Present"
+    date="May 2021 - July"
     href="/sorting-algorithm-visualizer"
   >
     <p>c# — wpf — xaml</p>
-  </SectionListItem>
-</SectionList>
+  </SectionItemLayout>
+
+  <SectionItemLayout
+    title="DFS visualizer"
+    date="February 2021 - March"
+    href="/projects/dfs-visualizer"
+  >
+    <p>c# — wpf — xaml</p>
+  </SectionItemLayout>
+</SectionLayout>
 
 <!-- TODO: project page -->
 
