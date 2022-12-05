@@ -1,0 +1,52 @@
+<section>
+  <a href="/CV-2022-EN.pdf" target="_blank">
+    <p>contact me</p>
+    <p>view CV</p>
+  </a>
+</section>
+
+<style lang="scss">
+  section {
+    padding: var(--gap-extra-large);
+    border-bottom: 1px solid currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    border: 1px solid currentColor;
+    padding: var(--gap-extra-large);
+    box-shadow: 7px 7px 0px -1px currentColor;
+    width: max(30%, 250px);
+    position: relative;
+    transition: box-shadow 500ms ease;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 10px 10px 0px -1px currentColor;
+    }
+
+    &:hover p:first-child {
+      top: -50%;
+    }
+
+    &:hover p:last-child {
+      top: 50%;
+    }
+  }
+
+  p {
+    font-size: var(--font-size-medium);
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: top 500ms ease;
+  }
+
+  p:last-child {
+    top: 150%;
+  }
+</style>
