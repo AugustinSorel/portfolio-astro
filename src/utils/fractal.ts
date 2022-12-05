@@ -17,8 +17,11 @@ export const fractal = () => {
       canvas.height = 300;
       len = 110;
     } else {
+      const headerHeight = parseInt(
+        getComputedStyle(document.body).getPropertyValue("--header-height")
+      );
       canvas.width = window.innerWidth / 3;
-      canvas.height = window.innerHeight - 64;
+      canvas.height = window.innerHeight - headerHeight;
       len = 175;
     }
     draw({ ctx, len });
