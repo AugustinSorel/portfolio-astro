@@ -1,0 +1,17 @@
+<li>
+  <slot />
+</li>
+
+<style lang="scss">
+  li {
+    font-size: var(--font-size-small);
+
+    &::marker {
+      content: "*";
+    }
+
+    &:not(:first-child) {
+      margin-top: var(--gap-extra-small);
+    }
+  }
+</style>
