@@ -1,0 +1,87 @@
+---
+export interface Props {
+  title: string;
+  date: string;
+  href: string;
+}
+
+const { title, date, href } = Astro.props;
+---
+
+<li>
+  <header>
+    <a href={href}>
+      <h3>{title}</h3>
+    </a>
+    <p>{date}</p>
+  </header>
+
+  <slot />
+</li>
+
+<style lang="scss">
+  li {
+    padding: var(--gap-large);
+    border-color: currentColor;
+    border-left: 1px solid;
+
+    & + & {
+      border-top: 1px solid;
+    }
+
+    @media screen and (max-width: 600px) {
+      border-left: none;
+    }
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--gap-medium);
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: var(--font-size-medium);
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 16px;
+      width: 16px;
+      background-color: currentColor;
+      margin-left: var(--gap-extra-small);
+      clip-path: polygon(
+        56.75% 35%,
+        23.5% 67.86%,
+        31.25% 75%,
+        63.5% 40%,
+        63.5% 75%,
+        73.5% 75%,
+        73.5% 25%,
+        23.5% 25%,
+        23.5% 35%
+      );
+    }
+  }
+
+  p {
+    font-style: italic;
+    font-size: var(--font-size-small);
+    font-weight: 300;
+  }
+</style>

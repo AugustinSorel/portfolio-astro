@@ -1,0 +1,47 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section>
+  <h2>{title}</h2>
+  <ul>
+    <slot />
+  </ul>
+</section>
+
+<style lang="scss">
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid currentColor;
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: none;
+    }
+  }
+
+  h2 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: var(--font-size-large);
+    padding: var(--gap-large);
+    position: sticky;
+    top: var(--header-height);
+    height: min-content;
+
+    @media screen and (max-width: 600px) {
+      position: relative;
+      top: 0;
+      border-bottom: 1px solid currentColor;
+      padding: 10% var(--gap-large);
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+</style>
