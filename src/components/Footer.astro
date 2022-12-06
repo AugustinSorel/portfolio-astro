@@ -17,12 +17,14 @@
 </footer>
 
 <style lang="scss">
+  @use "../styles/media-queries" as *;
+
   footer {
     padding: var(--gap-large);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       padding: 10% var(--gap-large);
       display: flex;
     }

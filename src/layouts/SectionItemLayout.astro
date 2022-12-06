@@ -20,6 +20,8 @@ const { title, date, href } = Astro.props;
 </li>
 
 <style lang="scss">
+  @use "../styles/media-queries" as *;
+
   li {
     padding: var(--gap-large);
     border-color: currentColor;
@@ -29,7 +31,7 @@ const { title, date, href } = Astro.props;
       border-top: 1px solid;
     }
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       border-left: none;
     }
   }
@@ -40,7 +42,7 @@ const { title, date, href } = Astro.props;
     justify-content: space-between;
     margin-bottom: var(--gap-medium);
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       flex-direction: column;
       align-items: flex-start;
     }

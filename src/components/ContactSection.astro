@@ -6,12 +6,18 @@
 </section>
 
 <style lang="scss">
+  @use "../styles/media-queries" as *;
+
   section {
     padding: var(--gap-extra-large);
     border-bottom: 1px solid currentColor;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      padding: 10%;
+    }
   }
 
   a {

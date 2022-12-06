@@ -12,7 +12,7 @@ export const fractal = () => {
 
   const init = () => {
     // mobile responsive
-    if (window.innerWidth < 600) {
+    if (window.innerWidth < 1000) {
       canvas.width = window.innerWidth;
       canvas.height = 300;
       len = 110;
