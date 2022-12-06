@@ -30,6 +30,7 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global lang="scss">
+  @use "../styles/media-queries" as *;
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
   :root {
@@ -116,7 +117,7 @@ const { title, description } = Astro.props;
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @include mobile {
     :root {
       --base-font-size: 1.25rem;
       --base-gap: 0.5rem;

@@ -9,6 +9,8 @@
 <!-- TODO: analytics ? https://microanalytics.io/ -->
 
 <style lang="scss">
+  @use "../styles/media-queries" as *;
+
   div {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -16,7 +18,7 @@
     border-bottom: 1px solid currentColor;
     overflow: hidden;
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       grid-template-columns: none;
       height: auto;
     }
@@ -28,7 +30,7 @@
     max-width: 50rem;
     animation: enter var(--animation-duration) var(--animation-timing-function);
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       font-size: var(--font-size-medium);
       margin: 20% var(--gap-large);
     }
@@ -37,7 +39,7 @@
   canvas {
     border-left: 1px solid currentColor;
 
-    @media screen and (max-width: 600px) {
+    @include mobile {
       border: none;
       border-top: 1px solid currentColor;
     }
