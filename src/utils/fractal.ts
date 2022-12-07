@@ -14,15 +14,10 @@ export const fractal = () => {
   });
 
   const init = () => {
-    const width = 500;
-    const height = 500;
-    len = 150;
+    len = window.innerWidth > 1000 ? 200 : 100;
 
-    canvas.style.width = "" + width / window.devicePixelRatio + "px";
-    canvas.style.height = "" + height / window.devicePixelRatio + "px";
-
-    canvas.width = width;
-    canvas.height = height;
+    canvas.width = window.innerWidth > 1000 ? 750 : 300;
+    canvas.height = window.innerWidth > 1000 ? 750 : 300;
 
     draw({ ctx, len });
   };
