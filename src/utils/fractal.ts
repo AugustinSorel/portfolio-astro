@@ -18,8 +18,8 @@ export const fractal = () => {
     const height = window.innerWidth > 1000 ? 700 : 300;
     len = window.innerWidth > 1000 ? 200 : 100;
 
-    // canvas.style.width = "" + width + "px";
-    // canvas.style.height = "" + height + "px";
+    canvas.style.width = "" + width + "px";
+    canvas.style.height = "" + height + "px";
 
     canvas.width = width;
     canvas.height = height;
