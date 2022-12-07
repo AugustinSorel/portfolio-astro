@@ -1,4 +1,4 @@
-const anglesList = [0.3, 0.6, 0.7, 0.8, 2, 3, 4, 5];
+const anglesList = [0.3, 0.6, 0.7, 2, 3, 4, 5];
 
 export const fractal = () => {
   const canvas = document.querySelector("canvas")!;
@@ -61,7 +61,7 @@ export const fractal = () => {
       .getPropertyValue("color");
 
     if (window.devicePixelRatio !== 1) {
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 2;
     }
 
     ctx.moveTo(0, 0);
