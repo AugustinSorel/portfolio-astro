@@ -65,16 +65,11 @@ const { title, description } = Astro.props;
     box-sizing: border-box;
   }
 
-  // FIXME: transition
   // FIXME: FIX animation
   // FIXME: blurry canvas
 
   body {
     font-family: "Roboto", sans-serif;
-
-    transition-property: color, background-color;
-    transition-duration: 500ms;
-    animation-timing-function: var(--animation-timing-function);
   }
 
   .dark-mode {
@@ -157,3 +152,9 @@ const { title, description } = Astro.props;
     background: currentColor;
   }
 </style>
+
+<script>
+  document.body.style.transitionProperty = "background-color, color";
+  document.body.style.transitionDuration = "1s";
+  document.body.style.transitionTimingFunction = "ease";
+</script>
