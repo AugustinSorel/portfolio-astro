@@ -14,11 +14,12 @@ export const fractal = () => {
   });
 
   const init = () => {
-    const width = 750;
-    const height = 750;
+    const width = window.innerWidth > 1000 ? 700 : 300;
+    const height = window.innerWidth > 1000 ? 700 : 300;
+    len = window.innerWidth > 1000 ? 200 : 100;
 
-    canvas.style.width = "" + width / window.devicePixelRatio + "px";
-    canvas.style.height = "" + height / window.devicePixelRatio + "px";
+    // canvas.style.width = "" + width + "px";
+    // canvas.style.height = "" + height + "px";
 
     canvas.width = width;
     canvas.height = height;
@@ -61,7 +62,7 @@ export const fractal = () => {
       .getPropertyValue("color");
 
     if (window.devicePixelRatio !== 1) {
-      ctx.lineWidth = 2;
+      // ctx.lineWidth = 2;
     }
 
     ctx.moveTo(0, 0);
