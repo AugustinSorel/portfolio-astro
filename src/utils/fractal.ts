@@ -4,7 +4,7 @@ export const fractal = () => {
   const canvas = document.querySelector("canvas")!;
   const ctx = canvas.getContext("2d")!;
 
-  let len = 250;
+  let len = 150;
   let angle =
     Math.PI / anglesList[Math.floor(Math.random() * anglesList.length)];
   type Props = { ctx: CanvasRenderingContext2D; len: number };
@@ -14,15 +14,15 @@ export const fractal = () => {
   });
 
   const init = () => {
-    const width = window.innerWidth > 1000 ? 700 : 400;
-    const height = window.innerWidth > 1000 ? 700 : 400;
-    len = window.innerWidth > 1000 ? 200 : 50;
+    const width = 500;
+    const height = 500;
+    len = 150;
 
     canvas.style.width = "" + width / window.devicePixelRatio + "px";
     canvas.style.height = "" + height / window.devicePixelRatio + "px";
 
-    canvas.width = width / window.devicePixelRatio;
-    canvas.height = height / window.devicePixelRatio;
+    canvas.width = width;
+    canvas.height = height;
 
     draw({ ctx, len });
   };
