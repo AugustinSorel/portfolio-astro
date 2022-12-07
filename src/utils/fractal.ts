@@ -1,9 +1,12 @@
+const anglesList = [-0.3, -0.6, -0.7, -0.8, -2, 3, 4, 5];
+
 export const fractal = () => {
   const canvas = document.querySelector("canvas")!;
   const ctx = canvas.getContext("2d")!;
 
-  let len = 200;
-  let angle = Math.PI / (Math.floor(Math.random() * 8) + 2);
+  let len = 250;
+  let angle =
+    Math.PI / anglesList[Math.floor(Math.random() * anglesList.length)];
   type Props = { ctx: CanvasRenderingContext2D; len: number };
 
   window.addEventListener("resize", () => {
