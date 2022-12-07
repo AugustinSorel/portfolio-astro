@@ -20,12 +20,13 @@
   @use "../styles/media-queries" as *;
 
   footer {
-    padding: var(--gap-large);
+    height: var(--header-height);
+    padding: 0 var(--gap-medium);
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr auto 1fr;
 
     @include mobile {
-      padding: 10% var(--gap-large);
       display: flex;
     }
   }
