@@ -1,6 +1,5 @@
 ---
 import ListItemLayout from "../layouts/ListItemLayout.astro";
-import ListLayout from "../layouts/ListLayout.astro";
 import SectionItemLayout from "../layouts/SectionItemLayout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
 ---
@@ -11,7 +10,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     date="september 2021 - present"
     href="https://le.ac.uk/"
   >
-    <ListLayout>
+    <ul>
       <ListItemLayout>
         Awards: Best first year undergraduate with an overall grade of 90%
       </ListItemLayout>
@@ -22,17 +21,17 @@ import SectionLayout from "../layouts/SectionLayout.astro";
       </ListItemLayout>
       <ListItemLayout>Computer Architecture(96%)</ListItemLayout>
       <ListItemLayout>Object Oriented Programming (99%)</ListItemLayout>
-    </ListLayout>
+    </ul>
   </SectionItemLayout>
   <SectionItemLayout
     title="peter symonds college"
     date="september 2019 - 2021"
     href="https://www.psc.ac.uk/"
   >
-    <ListLayout>
+    <ul>
       <ListItemLayout>Achieved: A* in a level Math</ListItemLayout>
       <ListItemLayout>Achieved: A* in a level Computer Science</ListItemLayout>
       <ListItemLayout>Achieved: A in a level French</ListItemLayout>
-    </ListLayout>
+    </ul>
   </SectionItemLayout>
 </SectionLayout>

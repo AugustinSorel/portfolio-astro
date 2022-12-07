@@ -1,9 +1,12 @@
+const anglesList = [0.3, 0.6, 0.7, 2, 3, 4, 5];
+
 export const fractal = () => {
   const canvas = document.querySelector("canvas")!;
   const ctx = canvas.getContext("2d")!;
 
-  let len = 175;
-  let angle = Math.PI / (Math.floor(Math.random() * 8) + 2);
+  let len = 150;
+  let angle =
+    Math.PI / anglesList[Math.floor(Math.random() * anglesList.length)];
   type Props = { ctx: CanvasRenderingContext2D; len: number };
 
   window.addEventListener("resize", () => {
@@ -11,19 +14,11 @@ export const fractal = () => {
   });
 
   const init = () => {
-    // mobile responsive
-    if (window.innerWidth < 1000) {
-      canvas.width = window.innerWidth;
-      canvas.height = 300;
-      len = 110;
-    } else {
-      const headerHeight = parseInt(
-        getComputedStyle(document.body).getPropertyValue("--header-height")
-      );
-      canvas.width = window.innerWidth / 3;
-      canvas.height = window.innerHeight - headerHeight;
-      len = 175;
-    }
+    len = window.innerWidth > 1000 ? 200 : 100;
+
+    canvas.width = window.innerWidth > 1000 ? 750 : 300;
+    canvas.height = window.innerWidth > 1000 ? 750 : 300;
+
     draw({ ctx, len });
   };
 
@@ -60,6 +55,11 @@ export const fractal = () => {
     ctx.strokeStyle = window
       .getComputedStyle(document.body)
       .getPropertyValue("color");
+
+    if (window.devicePixelRatio !== 1) {
+      // ctx.lineWidth = 2;
+    }
+
     ctx.moveTo(0, 0);
     ctx.lineTo(0, -len);
     ctx.stroke();

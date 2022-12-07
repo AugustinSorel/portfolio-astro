@@ -67,13 +67,7 @@ const { title, description } = Astro.props;
 
   body {
     font-family: "Roboto", sans-serif;
-
-    transition-property: color, background-color;
-    transition-duration: 500ms;
-    animation-timing-function: var(--animation-timing-function);
-
-    background-color: var(--background-color);
-    color: var(--color);
+    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
   .dark-mode {
@@ -84,13 +78,6 @@ const { title, description } = Astro.props;
   .light-mode {
     background-color: var(--background-color);
     color: var(--color);
-  }
-
-  header,
-  section,
-  footer,
-  canvas {
-    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
   a {
@@ -165,3 +152,9 @@ const { title, description } = Astro.props;
   async
   defer
 ></script>
+
+<script>
+  document.body.style.transitionProperty = "background-color, color";
+  document.body.style.transitionDuration = "1s";
+  document.body.style.transitionTimingFunction = "ease";
+</script>
