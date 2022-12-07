@@ -65,15 +65,16 @@ const { title, description } = Astro.props;
     box-sizing: border-box;
   }
 
+  // FIXME: transition
+  // FIXME: FIX animation
+  // FIXME: blurry canvas
+
   body {
     font-family: "Roboto", sans-serif;
 
     transition-property: color, background-color;
     transition-duration: 500ms;
     animation-timing-function: var(--animation-timing-function);
-
-    background-color: var(--background-color);
-    color: var(--color);
   }
 
   .dark-mode {
@@ -84,6 +85,13 @@ const { title, description } = Astro.props;
   .light-mode {
     background-color: var(--background-color);
     color: var(--color);
+  }
+
+  header,
+  section,
+  footer,
+  canvas {
+    animation: fadeIn var(--animation-duration) var(--animation-timing-function);
   }
 
   a {
@@ -149,12 +157,3 @@ const { title, description } = Astro.props;
     background: currentColor;
   }
 </style>
-
-<script
-  data-host="https://microanalytics.io"
-  data-dnt="false"
-  src="https://microanalytics.io/js/script.js"
-  id="ZwSg9rf6GA"
-  async
-  defer
-></script>
