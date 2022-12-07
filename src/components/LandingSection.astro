@@ -3,11 +3,27 @@
     I am a software engineer student from the University of Leicester.
     <strong>Passionate</strong> about web development and design.
   </p>
-  <canvas></canvas>
+  <article>
+    <canvas height="400" width="400"></canvas>
+  </article>
 </div>
 
 <style lang="scss">
   @use "../styles/media-queries" as *;
+
+  // FIXME: wrong html tag here
+  article {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    border-left: 1px solid currentColor;
+
+    @include mobile {
+      border: none;
+      border-top: 1px solid currentColor;
+    }
+  }
 
   div {
     display: grid;
@@ -31,15 +47,6 @@
     @include mobile {
       font-size: var(--font-size-medium);
       margin: 20% var(--gap-large);
-    }
-  }
-
-  canvas {
-    border-left: 1px solid currentColor;
-
-    @include mobile {
-      border: none;
-      border-top: 1px solid currentColor;
     }
   }
 
