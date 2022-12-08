@@ -14,10 +14,7 @@ export const fractal = () => {
   });
 
   const init = () => {
-    len = window.innerWidth > 1000 ? 200 : 100;
-
-    canvas.width = window.innerWidth > 1000 ? 750 : 300;
-    canvas.height = window.innerWidth > 1000 ? 750 : 300;
+    canvas.height = canvas.width = 500;
 
     draw({ ctx, len });
   };
