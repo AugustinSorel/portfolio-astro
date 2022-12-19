@@ -26,7 +26,9 @@
     box-shadow: 7px 7px 0px -1px currentColor;
     width: max(30%, 250px);
     position: relative;
-    transition: box-shadow 500ms ease;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
     overflow: hidden;
 
     &:hover {
